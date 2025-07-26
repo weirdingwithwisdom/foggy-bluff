@@ -195,10 +195,9 @@ body.newspaper {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #111;
+  color: #000;
   padding: 20px;
 }
-
 
 .newspaper-hero {
   text-align: center;
@@ -230,10 +229,11 @@ body.newspaper {
 
 .column {
   flex: 1 1 30%;
-  background-color: #ffffffcc;
   padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: #000;
 }
 
 .column h3 {
@@ -244,6 +244,7 @@ body.newspaper {
 .column p {
   font-size: 1rem;
   line-height: 1.4;
+  color: #000;
 }
 
 .column .cta {
