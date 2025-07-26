@@ -22,7 +22,7 @@
     }
 
     main {
-      max-width: 70%;
+      max-width: 80%;
       margin: 0 auto;
     }
 
@@ -66,10 +66,10 @@
     }
 
     .news-grid-item {
-      background-color: rgba(255,255,255,0.8);
+      background-color: transparent;
       padding: 15px;
-      border: 1px solid #000;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      border: none;
+      box-shadow: none;
     }
 
     .news-grid-item img {
@@ -77,9 +77,58 @@
       height: auto;
       margin-bottom: 10px;
     }
+
+    .news-grid-item {
+      position: relative;
+      padding: 20px;
+      background-color: transparent;
+    }
+
+    .news-grid-item::before,
+    .news-grid-item::after {
+      content: "";
+      display: block;
+      height: 8px;
+      margin: 12px auto;
+      border-top: 2px double #333;
+      width: 60%;
+    }
+
+    .news-grid-item h3 {
+      font-family: 'Special Elite', serif;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #000;
+      padding-bottom: 4px;
+      text-align: center;
+    }
+
+    .news-grid-item p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .headline {
+      font-family: 'Special Elite', serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 30px;
+      color: darkred;
+      text-shadow: 1px 1px #ddd;
+    }
+
+    .subhead {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body class="newspaper">
+  <div style="text-align: center; font-family: 'Special Elite', serif; font-size: 1rem; margin-bottom: 10px; font-style: italic;">
+    Wednesday, October 31, 2025
+  </div>
   <div id="site-header">
     <a href="index.html">
       <img src="images/foggy-bluff-logo" alt="Foggy Bluff Logo" class="site-logo">
@@ -87,7 +136,7 @@
   </div>
   <main>
     <section class="meta-strip">
-      <div class="weather">☁️ Weather: Cool & Foggy, 68°F</div>
+      <div class="weather">🌤️ Weather (Oct 31): High near 82 °F, Low around 66 °F</div>
       <div class="pricing">🎟️ Tickets: $20 Adults · $10 Kids 10 & Under</div>
     </section>
 
