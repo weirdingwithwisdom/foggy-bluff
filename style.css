@@ -190,12 +190,8 @@ footer {
 /* Newspaper Design */
 body.newspaper {
   font-family: 'Special Elite', monospace;
-  background-image: url('images/newspaper-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #000;
+  background-color: #f2efe7;
+  color: #111;
   padding: 20px;
 }
 
@@ -280,4 +276,8 @@ body.newspaper {
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
   padding: 5px;
   background-color: #f2efe7;
+}
+
+.news-grid-item.wide {
+  grid-column: span 2;
 }
