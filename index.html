@@ -18,7 +18,7 @@
       background-attachment: fixed;
       color: #000;
       padding: 20px;
-      background-color: rgba(242, 239, 231, 0.85); /* faded effect */
+      background-color: rgba(242, 239, 231, 0.85);
     }
 
     main {
@@ -39,7 +39,7 @@
       padding: 5px;
       background-color: #f2efe7;
     }
-  
+
     .meta-strip {
       display: flex;
       justify-content: space-between;
@@ -51,11 +51,13 @@
       border-bottom: 1px solid #333;
       background-color: rgba(255,255,255,0.6);
     }
+
     .meta-strip .weather,
     .meta-strip .pricing {
       flex: 1;
       text-align: center;
-    }$1
+    }
+  </style>
 </head>
 <body class="newspaper">
   <div id="site-header">
@@ -63,11 +65,13 @@
       <img src="images/foggy-bluff-logo" alt="Foggy Bluff Logo" class="site-logo">
     </a>
   </div>
-  $1<section class="meta-strip">
-  <div class="weather">☁️ Weather: Cool & Foggy, 68°F</div>
-  <div class="pricing">🎟️ Tickets: $20 Adults · $10 Kids 10 & Under</div>
-</section>
-<section class="newspaper-hero">
+  <main>
+    <section class="meta-strip">
+      <div class="weather">☁️ Weather: Cool & Foggy, 68°F</div>
+      <div class="pricing">🎟️ Tickets: $20 Adults · $10 Kids 10 & Under</div>
+    </section>
+
+    <section class="newspaper-hero">
       <h2 class="headline">TERROR STRIKES MELBOURNE AGAIN!</h2>
       <p class="subhead">The House on Foggy Bluff Returns for Its Most Twisted Year Yet</p>
       <hr>
