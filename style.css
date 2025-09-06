@@ -187,15 +187,6 @@ body.newspaper header.site-header {
   background-color: transparent;
 }
 
-body.newspaper .main-nav a {
-  color: white;
-  text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000;
-}
-
 .newspaper-hero {
   text-align: center;
   margin-bottom: 20px;
@@ -460,4 +451,14 @@ body.newspaper .main-nav a {
   .mobile-nav {
     display: none !important;
   }
+}
+
+/* Fix Newspaper Nav Link color */
+body.newspaper .main-nav a {
+  color: #000;
+  text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
