@@ -434,15 +434,15 @@ body.newspaper header.site-header {
     gap: 20px;
   }
 
-  .main-nav a {
-  color: white;
+  body.newspaper .main-nav a {
+  color: #000;
   text-decoration: none;
   font-size: 1.1rem;
   text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
 
 
