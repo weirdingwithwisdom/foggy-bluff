@@ -1,4 +1,3 @@
-<!-- File: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,18 +25,15 @@
       margin: 0 auto;
     }
 
-    .newspaper-image {
+    #site-header {
       text-align: center;
-      margin: 40px auto;
+      margin-bottom: 20px;
     }
 
-    .newspaper-image img {
-      max-width: 80%;
+    .site-logo {
+      max-width: 300px;
       height: auto;
-      border: 2px solid #000;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-      padding: 5px;
-      background-color: #f2efe7;
+      background: transparent;
     }
 
     .meta-strip {
@@ -58,6 +54,21 @@
       text-align: center;
     }
 
+    .headline {
+      font-family: 'Special Elite', serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 30px;
+      color: darkred;
+      text-shadow: 1px 1px #ddd;
+    }
+
+    .subhead {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
     .news-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -70,18 +81,7 @@
       padding: 15px;
       border: none;
       box-shadow: none;
-    }
-
-    .news-grid-item img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .news-grid-item {
       position: relative;
-      padding: 20px;
-      background-color: transparent;
     }
 
     .news-grid-item::before,
@@ -109,31 +109,57 @@
       text-align: justify;
     }
 
-    .headline {
-      font-family: 'Special Elite', serif;
-      font-size: 2rem;
-      text-align: center;
-      margin-top: 30px;
-      color: darkred;
-      text-shadow: 1px 1px #ddd;
+    .news-grid-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
     }
 
-    .subhead {
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      color: darkred;
+    }
+
+    footer {
       text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
+      margin-top: 40px;
+      font-size: 0.85rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .news-grid {
+        display: block;
+      }
+
+      .news-grid-item {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      .news-grid-item img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
-<div id="site-header">
+
+<body class="newspaper">
+  <div id="site-header">
     <a href="index.html">
       <img src="images/foggy-bluff-logo.png" alt="Foggy Bluff Logo" class="site-logo">
     </a>
   </div>
-<body class="newspaper">
+
   <div style="text-align: center; font-family: 'Special Elite', serif; font-size: 1rem; margin-bottom: 10px; font-style: italic;">
-    <p></p><p></p>
     Friday, October 31, 2025
+  </div>
+
   <main>
     <section class="meta-strip">
       <div class="weather">🌤️ Weather: High near 82 °F, Low around 66 °F</div>
@@ -147,33 +173,36 @@
     </section>
 
     <section class="news-grid">
-        <div class="news-grid-item">
+      <div class="news-grid-item">
         <img src="images/sepia-house.png" alt="Green Gables">
         <p></p>
       </div>
+
       <div class="news-grid-item">
         <h3>Holiday Haunts Invade Foggy Bluff</h3>
         <p>This year's theme, "Holiday Haunts," brings Krampus claws, haunted hearts, and ghostly celebrations to life in horrifying detail. From cursed candy canes to haunted mistletoe, no holiday is safe.</p>
         <a href="tickets.html" class="cta">Get Tickets</a>
       </div>
+
       <div class="news-grid-item">
         <h3>Sightings Reported</h3>
         <p>Guests from past years claim to have seen things they can't explain — flickering shadows, whispers in the dark, and cold spots where none should be. Enter if you dare.</p>
         <a href="gallery.html" class="cta">View Gallery</a>
       </div>
+
       <div class="news-grid-item">
         <h3>Volunteers Needed</h3>
         <p>The Foggy Bluff crew is looking for ghouls, witches, and mortals to help run the show. From scare actors to scene decorators, everyone plays a part in the fright.</p>
         <a href="volunteer.html" class="cta">Sign Up</a>
       </div>
+
       <div class="news-grid-item wide">
-       <img src="images/cast-photo-2024.png" alt="Cast & Crew 2024">
-       <p></p>
+        <img src="images/cast-photo-2024.png" alt="Cast & Crew 2024">
+        <p></p>
       </div>
-
     </section>
-
   </main>
+
   <footer>
     <p>&copy; 2025 House on Foggy Bluff. All rights reserved.</p>
   </footer>
