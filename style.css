@@ -329,11 +329,11 @@ body.newspaper header.site-header {
 
 /* Hamburger + Slide-In Mobile Nav */
 #hamburger {
-  display: block;
+  display: none; /* Hidden by default, shown only on mobile via media query */
   font-size: 2rem;
   background-color: transparent;
-  color: #fff; /* changed from #000 to white */
-  border: 2px solid #fff; /* white border */
+  color: #fff;
+  border: 2px solid #fff;
   padding: 8px 12px;
   border-radius: 5px;
   position: absolute;
@@ -348,18 +348,23 @@ body.newspaper header.site-header {
   border-color: #000000;
 }
 
-
 #closeMenu {
+  display: none; /* Also hidden by default */
+  font-size: 2rem;
+  background: transparent;
+  border: 2px solid #000;
+  padding: 8px 12px;
+  border-radius: 5px;
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 2rem;
-  background: none;
-  border: none;
   cursor: pointer;
-  color: #000000;
+  z-index: 1003;
+  color: #000;
+  background-color: #fff;
 }
 
+/* Mobile nav panel */
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -379,6 +384,7 @@ body.newspaper header.site-header {
   right: 0;
 }
 
+/* Menu item layout */
 .mobile-nav ul {
   list-style: none;
   padding: 0;
@@ -396,13 +402,21 @@ body.newspaper header.site-header {
   text-decoration: none;
 }
 
-/* Show hamburger + hide nav on mobile */
+/* MEDIA QUERIES: mobile only */
 @media (max-width: 768px) {
   #hamburger {
     display: block;
   }
 
   .main-nav {
-    display: none;
+    display: none; /* Hide full nav on mobile */
+  }
+
+  .mobile-nav.open + #hamburger {
+    display: none; /* Hide hamburger when menu is open */
+  }
+
+  .mobile-nav.open ~ #closeMenu {
+    display: block; /* Show close button */
   }
 }
