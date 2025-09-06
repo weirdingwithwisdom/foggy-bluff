@@ -429,6 +429,18 @@ body.newspaper header.site-header {
     gap: 20px;
   }
 
+  .main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+
   #hamburger,
   #closeMenu,
   .mobile-nav {
