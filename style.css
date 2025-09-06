@@ -1,17 +1,27 @@
 /* General Styles */
-
 body {
   margin: 0;
   padding: 0;
   font-family: Georgia, serif;
   background-color: #111;
-  background-image: url('images/dark-texture.png'); /* Replace or delete if not using a texture */
+  background-image: url('images/dark-texture.png');
   background-size: cover;
   color: #f5f5f5;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Centering content in section */
+main {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 main section {
   max-width: 800px;
   margin: 0 auto;
@@ -65,23 +75,21 @@ iframe {
   margin-top: 20px;
 }
 
-/* Adjust CTA buttons */
 .cta {
   display: inline-block;
-  margin-top: 20px;
   padding: 12px 24px;
   background-color: #ff4c4c;
   color: #000;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 15px;
   transition: background-color 0.3s ease;
 }
 
 .cta:hover {
   background-color: #e00000;
 }
-
 
 /* Header */
 header {
@@ -144,22 +152,6 @@ nav a:hover {
   border: 5px solid #880000;
 }
 
-.cta {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff4c4c;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.cta:hover {
-  background-color: #e00000;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -168,23 +160,6 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
   border-top: 1px solid #333;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .cta {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
 }
 
 /* Newspaper Design */
@@ -257,7 +232,6 @@ body.newspaper {
   background-color: #000;
 }
 
-
 .site-logo {
   max-width: 200px;
   height: auto;
@@ -269,6 +243,7 @@ body.newspaper {
   text-align: center;
   margin: 40px auto;
 }
+
 .newspaper-image img {
   max-width: 80%;
   height: auto;
@@ -282,8 +257,22 @@ body.newspaper {
   grid-column: span 2;
 }
 
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Mobile Site Adjustments */
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   main {
@@ -292,7 +281,7 @@ body.newspaper {
   }
 
   .news-grid {
-    grid-template-columns: 1fr; /* Stack all items in one column */
+    grid-template-columns: 1fr;
   }
 
   .site-header {
@@ -326,68 +315,75 @@ body.newspaper {
   }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-main {
-  margin: 0 auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
-.hamburger {
+/* Hamburger + Slide-In Mobile Nav */
+#hamburger {
   display: none;
+  font-size: 2rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+  cursor: pointer;
+}
+
+#closeMenu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
   color: #000;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 80%;
+  max-width: 300px;
+  background-color: #f2efe7;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.4);
+  transition: right 0.3s ease-in-out;
+  padding: 1rem;
+  z-index: 1001;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 70px;
+}
+
+.mobile-nav li {
+  margin: 20px 0;
+}
+
+.mobile-nav a {
+  font-family: 'Special Elite', monospace;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Show hamburger + hide nav on mobile */
 @media (max-width: 768px) {
-  .hamburger {
+  #hamburger {
     display: block;
   }
 
   .main-nav {
     display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px 0;
-    z-index: 999;
-  }
-
-  .main-nav.open {
-    display: block;
-  }
-
-  .main-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .main-nav ul li a {
-    font-size: 1.2rem;
   }
 }

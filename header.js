@@ -1,16 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Load header.html dynamically
   fetch("header.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("site-header").innerHTML = data;
 
-      // Wait until header is loaded before assigning toggle behavior
+      // Add functionality for hamburger toggle
       const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
+      const mobileNav = document.getElementById("mobileNav");
+      const closeMenu = document.getElementById("closeMenu");
 
-      if (hamburger && navMenu) {
+      if (hamburger && mobileNav && closeMenu) {
         hamburger.addEventListener("click", () => {
-          navMenu.classList.toggle("open");
+          mobileNav.classList.add("open");
+        });
+
+        closeMenu.addEventListener("click", () => {
+          mobileNav.classList.remove("open");
         });
       }
     })
@@ -18,6 +24,5 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading header:", err);
     });
 });
-
 
 
