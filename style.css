@@ -407,7 +407,8 @@ body.newspaper header.site-header {
 }
 
 .mobile-nav a {
-  font-family: 'Special Elite', monospace;
+  font-family: "Trade Winds", system-ui;
+  font-style: normal;
   font-size: 1.2rem;
   color: #000000;
   text-decoration: none;
