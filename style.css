@@ -420,3 +420,18 @@ body.newspaper header.site-header {
     display: block; /* Show close button */
   }
 }
+
+/* === DESKTOP FIX: Show full nav, hide mobile elements === */
+@media (min-width: 769px) {
+  .main-nav {
+    display: flex !important;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #hamburger,
+  #closeMenu,
+  .mobile-nav {
+    display: none !important;
+  }
+}
