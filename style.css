@@ -453,12 +453,3 @@ body.newspaper header.site-header {
   }
 }
 
-/* Fix Newspaper Nav Link color */
-body.newspaper .main-nav a {
-  color: #000;
-  text-shadow:
-    -1px -1px 0 #fff,
-     1px -1px 0 #fff,
-    -1px  1px 0 #fff,
-     1px  1px 0 #fff;
-}
