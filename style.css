@@ -405,6 +405,7 @@ body.newspaper header.site-header {
   font-size: 1.2rem;
   color: #000000;
   text-decoration: none;
+  text-shadow: none
 }
 
 /* MEDIA QUERIES: mobile only */
