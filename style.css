@@ -444,6 +444,8 @@ body.newspaper header.site-header {
      1px -1px 0 #fff,
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
+  font-family: "Trade Winds", system-ui;
+  font-style: normal;
 }
 
 
