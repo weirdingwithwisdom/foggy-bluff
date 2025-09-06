@@ -187,6 +187,15 @@ body.newspaper header.site-header {
   background-color: transparent;
 }
 
+body.newspaper .main-nav a {
+  color: white;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
 .newspaper-hero {
   text-align: center;
   margin-bottom: 20px;
