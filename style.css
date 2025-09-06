@@ -325,3 +325,20 @@ body.newspaper {
     height: auto;
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
