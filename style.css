@@ -167,7 +167,19 @@ body.newspaper {
   font-family: 'Special Elite', monospace;
   background-color: #f2efe7;
   color: #111;
-  padding: 20px;
+  padding: 0px;
+}
+
+body.newspaper .site-logo {
+  max-width: 180px; /* Slightly smaller to match other pages */
+  margin: 0 auto 20px auto; /* Center it properly */
+  display: block;
+}
+
+body.newspaper header.site-header {
+  padding: 0px 0;
+  text-align: center;
+  background-color: transparent;
 }
 
 .newspaper-hero {
