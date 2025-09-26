@@ -480,12 +480,13 @@ body.newspaper header.site-header {
 .sponsor-logos a {
   display: inline-block;
   max-width: 150px;
-  flex: 1 1 100px;
+  flex: 1 1 80px;
 }
 
 .sponsor-logos img {
   width: 100%;
   height: auto;
+  max-height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
   transition: transform 0.2s ease-in-out;
