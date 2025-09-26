@@ -463,3 +463,34 @@ body.newspaper header.site-header {
   }
 }
 
+/* Sponsor Section */
+.sponsors {
+  text-align: center;
+  padding: 2rem;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.sponsor-logos a {
+  display: inline-block;
+  max-width: 150px;
+  flex: 1 1 100px;
+}
+
+.sponsor-logos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease-in-out;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.05);
+}
